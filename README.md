@@ -1,24 +1,19 @@
 # cdtest
 
-## Project setup
-```
-pnpm install
-```
+使用GitHub Actions实现CI/CD流程的模板仓库
 
-### Compiles and hot-reloads for development
-```
-pnpm run serve
-```
+流程为将项目打包后推送到服务器
 
-### Compiles and minifies for production
-```
-pnpm run build
-```
+仓库中的vue工程文件仅为测试，并无实际意义
 
-### Lints and fixes files
-```
-pnpm run lint
-```
+## 使用方法
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+fork本仓库，在`secrets`选项里配置私有变量，变量有固定的名称
+
+|变量名|作用|
+|:----    |:-------    |
+|DEPLOY_KEY    |服务器的私钥     |
+|SERVER_IP |服务器的IP地址 |
+|SERVER_PORT |服务器的SSH端口 |
+|SERVER_USERNAME     |登录到服务器的用户名 |
+|SERVER_PATH|部署到服务器的路径     |

@@ -1,5 +1,4 @@
-name: deploy
-
+name: build and deploy
 on:
   workflow_dispatch:
   push:
@@ -8,7 +7,6 @@ on:
     paths-ignore:
       - README.MD
       - LICENSE
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
