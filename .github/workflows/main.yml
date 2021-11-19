@@ -1,6 +1,6 @@
-name: deploy 
+name: deploy
 
-on: 
+on:
   push:
     branches:
       - master
@@ -13,15 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-      uses: actions/checkout@v2
-       - name: Install and Build 🔧 
+        uses: actions/checkout@v2
+      - name: Install and Build 🔧
         run: |
           npm install
           npm run build
       - name: Deploy to server 🚀
         uses: AEnterprise/rsync-deploy@v1.0
         env:
-          DEPLOY_KEY: ${{secrets.DEPLOY_KEY}} 
+          DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
           SERVER_IP: ${{secrets.SERVER_IP}}
           SERVER_PORT: ${{secrets.SERVER_PORT}}
           USERNAME: ${{secrets.SERVER_USERNAME}}
