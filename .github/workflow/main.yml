@@ -27,4 +27,4 @@ jobs:
           USERNAME: ${{secrets.SERVER_USERNAME}}
           SERVER_DESTINATION: ${{secrets.SERVER_PATH}}
           FOLDER: ./dist
-          ARGS: ""
+          ARGS: "-e -c -r --delete"
